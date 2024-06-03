@@ -1,6 +1,9 @@
+import DownloadButton from '@/utils/downloadButton';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+import logo from '@/../public/logo.svg';
+import InnerAnimate from '@/features/animateInOut/innerAnimate';
 export const pageList = [
   {
     id: 0,
@@ -20,7 +23,9 @@ const NavBar = () => {
       <div className="p-4 lp:p-2">
         <div className="w-full bg-[#4343432c] py-4 px-24 sm:px-8 rounded-lg">
           <div className="flex lp:flex-col lp:gap-5 flex-wrap items-center justify-between">
-            <h1 className="text-3xl font-bold text-white lp:text-center">Берсерк ассистент</h1>
+            {/* <h1 className="text-3xl font-bold text-white lp:text-center">Берсерк ассистент</h1> */}
+            <Image src={logo} alt="logo" width={48} height={48} loading="lazy" />
+
             <ul className="text-white items-center font-bold flex flex-wrap lp:flex-col gap-10 lp:gap-5">
               {pageList.map((el) => (
                 <Link key={el.id} href={el.path} className="nav-link">
@@ -28,7 +33,7 @@ const NavBar = () => {
                 </Link>
               ))}
               <li>
-                <button className="bg-mainColor p-2 font-bold hover:bg-foreground hover:duration-300 rounded-md">Скачать</button>
+                <DownloadButton />
               </li>
             </ul>
           </div>

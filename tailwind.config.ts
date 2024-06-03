@@ -35,6 +35,7 @@ const config: Config = {
     colors: {
       transparent: 'transparent',
       mainColor: 'rgb(234 88 12);',
+      gray: '#808080',
       foreground: '#202020',
       white: '#fff',
     },

@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 
 type Props = {
   children: React.ReactNode;
-  delay?: number;
 };
 
-const InnerAnimate = ({ children, delay = 0.1 }: Props) => {
+const InnerAnimate = ({ children }: Props) => {
   return (
     <motion.div
       className="box"
@@ -14,7 +13,7 @@ const InnerAnimate = ({ children, delay = 0.1 }: Props) => {
       animate={{ opacity: 1 }}
       transition={{
         duration: 0.5,
-        delay: delay,
+        delay: 0.1,
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
