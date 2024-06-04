@@ -44,7 +44,7 @@ const ContactsClient: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center px-6 bg-[#fad6ac5b] rounded-lg p-4">
       {formFields.map((field: FormField) => (
-        <div key={field.name} className="mb-4">
+        <div key={field.name} className="mb-4 ">
           <label htmlFor={field.name} className="block text-sm font-medium text-foreground">
             {field.label}
           </label>
