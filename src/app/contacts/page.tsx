@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { FormField, formFields } from '@/models/form/formFields';
-import InnerAnimate from '@/features/animateInOut/innerAnimate';
 
 const Contacts: React.FC = () => {
   const [formData, setFormData] = useState<{ [key: string]: string }>(() => {
