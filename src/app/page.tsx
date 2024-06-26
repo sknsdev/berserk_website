@@ -6,16 +6,16 @@ const HomePage = () => {
   return (
     <main>
       <section className="relative flex flex-col bg-dark justify-center items-center min-h-screen max-h-[100dvh] p-8">
-        <div className="w-full h-[100dvh] flex bg-mainOrange flex-col justify-center items-center">
-          <h1 className="text-dark text-[350px]">БЕРСЕРК</h1>
-          <h2 className={`${mark.className} text-mainRose text-[200px] absolute bottom-[250px]`}>Ассистент</h2>
-          <p className="px-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus sunt dolor earum dolorum, doloremque quasi necessitatibus cupiditate veniam laboriosam ea accusamus a error perferendis
-            laudantium consequuntur delectus amet incidunt molestias. Blanditiis debitis magnam adipisci animi velit sint architecto dolorem quas, nemo optio totam obcaecati? Laboriosam, cumque
-            reprehenderit aliquam voluptatum obcaecati excepturi sit. Corrupti amet dolore eaque quos veniam fuga cupiditate!
-          </p>
+        <div className="w-full h-[100dvh] flex flex-col items-center justify-center  bg-mainOrange ">
+          <div>
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-dark text-[350px]">БЕРСЕРК</h1>
+              <h2 className={`${mark.className} text-mainRose text-[200px] absolute bottom-[200px]`}>Ассистент</h2>
+            </div>
+            <p className="text-left max-w-[400px] text-sm text-white">Бесплатное мобильное приложение для ККИ “Берсерк” уже доступно в Google Store и Ru Store</p>
+          </div>
         </div>
-        {/* <Image src={phone} alt="phone" placeholder="empty" priority className="absolute w-[600px] bottom-0" /> */}
+        <Image src={phone} alt="phone" placeholder="empty" priority className="absolute w-[600px] bottom-0" />
       </section>
     </main>
   );

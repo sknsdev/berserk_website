@@ -41,7 +41,7 @@ const config: Config = {
       dark: '#101010',
       grayDark: '#202020',
       grayLight: '#808080',
-      white: '#fff',
+      white: '#eee',
       black: '#000',
 
       // button colors
