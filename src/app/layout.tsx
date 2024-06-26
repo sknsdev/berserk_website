@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Lora } from 'next/font/google';
+import { Inter, Lora, Marck_Script } from 'next/font/google';
 import './globals.css';
 
 const inter = Lora({ subsets: ['latin'] });
