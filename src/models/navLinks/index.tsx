@@ -8,7 +8,7 @@ export const pageList: IPageList[] = [
   },
   {
     id: 1,
-    name: 'Контакты',
-    path: '/contacts',
+    name: 'Поддержка',
+    path: '/support',
   },
 ];
