@@ -34,7 +34,7 @@ const config: Config = {
     },
     colors: {
       transparent: 'transparent',
-      mainDark: '#101010',
+      mainDark: '#313131',
       mainOrange: '#ED8B49',
       mainRose: '#FF4747',
       // list colors
