@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+import colors from 'tailwindcss/colors';
+
 const config: Config = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
@@ -33,6 +35,7 @@ const config: Config = {
       },
     },
     colors: {
+      ...colors,
       transparent: 'transparent',
       mainDark: '#313131',
       mainOrange: '#ED8B49',
