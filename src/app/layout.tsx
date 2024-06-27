@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Lora } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
-import { AnimatePresence } from 'framer-motion';
 import Header from '@/components/header';
 import { PageTransitionLayout } from '@/features/pageTransition/layout';
 
-const inter = Lora({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
+// const inter = Lora({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Берсерк ассистент',

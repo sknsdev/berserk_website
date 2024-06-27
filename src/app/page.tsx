@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import phone from '@/../public/hero/phone.png';
-import { Marck_Script } from 'next/font/google';
+import { Inter, Marck_Script } from 'next/font/google';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -57,7 +57,6 @@ const HomePage = () => {
               </motion.span>
             ))}
           </motion.h2>
-          {/* <motion.svg width={600} height={600} viewBox="0 0 600 600" initial="hidden" animate="visible"></motion.svg> */}
         </div>
         <motion.p initial={{ x: '-100%', opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.4, type: 'spring' }} className="text-left max-w-[400px] text-sm text-white">
           Бесплатное мобильное приложение для ККИ “Берсерк” уже доступно в Google Store и Ru Store
