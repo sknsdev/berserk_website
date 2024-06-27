@@ -34,10 +34,19 @@ const config: Config = {
     },
     colors: {
       transparent: 'transparent',
-      mainColor: 'rgb(234 88 12);',
-      gray: '#808080',
-      foreground: '#202020',
-      white: '#fff',
+      mainDark: '#313131',
+      mainOrange: '#ED8B49',
+      mainRose: '#FF4747',
+      // list colors
+      dark: '#101010',
+      grayDark: '#202020',
+      grayLight: '#808080',
+      white: '#eee',
+      black: '#000',
+
+      // button colors
+      buttonDark: '#101010',
+      buttonLight: '#fff',
     },
   },
 
