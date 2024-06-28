@@ -9,7 +9,7 @@ const config: Config = {
       '2k': { min: '1439px' },
       // => @media (min-width: 1440px) { ... }
 
-      '2xl': { max: '1535px' },
+      '2xl': { max: '1440px' },
       // => @media (max-width: 1535px) { ... }
 
       xl: { max: '1279px' },
