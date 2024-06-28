@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/header';
+import Header from '@/components/fc/header';
 import { PageTransitionLayout } from '@/features/pageTransition/layout';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,13 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
+        <Header />
         <PageTransitionLayout>
-          <main>
-            <Header />
-            <section className="relative flex flex-col bg-mainDark justify-center items-center min-h-screen max-h-[100dvh] p-8">
-              <div className="w-full h-[100dvh] flex flex-col items-center justify-center bg-mainOrange">{children}</div>
-            </section>
-          </main>
+          <div className="w-full min-h-[100dvh] flex flex-col items-center justify-center bg-mainOrange">{children}</div>
         </PageTransitionLayout>
       </body>
     </html>

@@ -1,7 +1,7 @@
 'use client';
 import React, { ChangeEvent, FormEvent } from 'react';
-import Input from '@/components/ui/input';
 import { formFields } from '@/models/form/formFields';
+import Input from '@/components/ui/input';
 interface FormData {
   [key: string]: string;
 }

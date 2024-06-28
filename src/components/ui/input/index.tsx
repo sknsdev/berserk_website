@@ -22,7 +22,7 @@ const Input: React.FC<InputProps> = ({ containerStyle, errors, inputStyle, requi
           placeholder={placeholder}
           value={value}
           style={inputStyle}
-          className={`p-2 rounded-lg w-[500px]  ${errors && !value && required ? 'border-mainRose' : 'border-gray-300'}`}
+          className={`p-2 rounded-lg max-w-[500px] w-[500px] sm:w-full  ${errors && !value && required ? 'border-mainRose' : 'border-gray-300'}`}
           {...rest}
         />
       </div>
