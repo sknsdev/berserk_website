@@ -37,15 +37,23 @@ export const ContactsFormClient: React.FC = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center">
-      {formFields.map((field) => (
-        <Input required errors={false} key={field.name} value={formData[field.name] || ''} onChange={e => handleChange(e, field.name)} type={field.type} placeholder={field.placeholder} label={field.label} />
-      ))}
-      <button type="submit" className="rounded-lg bg-white p-2">
-        Отправить
-      </button>
-      <RequestStatusBanner isSended={isSended} message="Сообщение успешно отправлено!" onClose={() => setIsSended(false)} />
+    <div className='flex flex-col text-left text-xl text-gray-800 p-2 border rounded-lg bg-white gap-2 mx-9 max-w-[50%] sm:max-w-[100%]'>
+      <h2 className='text-2xl size-12'>Связаться с нами</h2>
+      <div className="text-xl flex flex-col gap-4">
+        <p>Вы можете отправить через форму обратной связи ваш вопрос, предложение, запросить удаление аккаунта или просто так</p>
+        <p>При сообщении о каком-либо баге или некорректной работе приложения - сообщите версию приложения и оставьте вашу электронную почту для связи в тексте сообщения</p>
 
-    </form>
+      </div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center w-full">
+        {formFields.map((field) => (
+          <Input required errors={false} key={field.name} value={formData[field.name] || ''} onChange={e => handleChange(e, field.name)} type={field.type} placeholder={field.placeholder} label={field.label} />
+        ))}
+        <button type="submit" className="rounded-lg bg-white p-2">
+          Отправить
+        </button>
+        <RequestStatusBanner isSended={isSended} message="Сообщение успешно отправлено!" onClose={() => setIsSended(false)} />
+
+      </form>
+    </div>
   );
 };
