@@ -23,7 +23,7 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <div>
-      <label htmlFor={inputId} className="text-white font-bold text-sm">
+      <label htmlFor={inputId} className="text-dark font-bold text-sm">
         {label}
       </label>
       <div onClick={handleClick} className="relative" style={containerStyle}>
@@ -40,7 +40,7 @@ const Input: React.FC<InputProps> = ({
           {...rest}
         />
       </div>
-      {errors && !value && required && <p className="text-red-500">Required!</p>} {/* Добавлен класс для красного текста */}
+      {/* {(errors || !value || required) && <p className="text-red-500">Обязательное поле</p>} Добавлен класс для красного текста */}
     </div>
   );
 };
