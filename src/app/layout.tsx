@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode | React.ReactPortal;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru-RU">
       <body className={`${inter.className} bg-mainOrange`}>
         <Header />
         <PageTransitionLayout>

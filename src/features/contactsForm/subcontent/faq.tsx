@@ -15,7 +15,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                 className="flex items-center justify-between py-4 cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h2 className="text-lg font-semibold text-gray-800">
+                <h2 className="text-lg font-semibold text-gray-800 cursor-pointer">
                     {question}
                 </h2>
                 <span className="text-gray-500">
