@@ -11,6 +11,7 @@ import { BsTelegram } from 'react-icons/bs';
 import { LuFormInput } from 'react-icons/lu';
 import FAQ from './subcontent/faq';
 import { motion } from 'framer-motion';
+import ContactInfo from './subcontent/contactinfo';
 
 interface FormData {
   [key: string]: string;
@@ -48,7 +49,8 @@ export const ContactsFormClient: React.FC = () => {
   };
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.25, type: 'spring' }} className='max-w-4xl px-8 pt-8 sm:p-4 flex flex-col text-left text-xl text-gray-800 p-2 border rounded-lg bg-white gap-2 mx-9'>
-      <div className="text-xl flex flex-col gap-4 sm:text-sm">
+      <ContactInfo />
+      <div className="text-xl flex flex-col gap-4 sm:text-sm  p-6">
         <h2 className="text-2xl font-bold text-center mb-4 text-gray-800 sm:text-xl">
           Поддержка
         </h2>
