@@ -8,7 +8,12 @@ export const pageList: IPageList[] = [
   },
   {
     id: 1,
-    name: 'Поддержка',
+    name: 'Связаться',
     path: '/contact',
+  },
+  {
+    id: 2,
+    name: 'Центр помощи',
+    path: 'https://support.berserk-app.ru',
   },
 ];
