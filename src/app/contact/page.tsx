@@ -1,13 +1,17 @@
-'use client';
 import { ContactsFormClient } from '@/features/contactsForm/contactsFormClient';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Поддержка - Берсерк ассистент',
+  description: 'Поддержка пользоветелей приложения “Берсерк Ассистент”',
+};
 
 const Contact = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.15, type: 'spring' }}>
+    <div className='mt-28 p-10 sm:p-2'>
       <ContactsFormClient />
-    </motion.div>
+    </div>
   );
 };
 

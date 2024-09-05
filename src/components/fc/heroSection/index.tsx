@@ -1,9 +1,8 @@
 'use client';
-import phone from '@/../public/hero/phone.png';
 import { Marck_Script } from 'next/font/google';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import StoresDownloader from '@/components/ui/download/StoresDownloader';
+import { FaChevronDown } from 'react-icons/fa';
 
 const mark = Marck_Script({ subsets: ['latin'], weight: '400' });
 
@@ -32,12 +31,27 @@ const HeroSection: React.FC = () => {
       },
     },
   };
+
+  const arrowVariants = {
+    initial: { opacity: 1, y: 10 },
+    animate: {
+      opacity: 1,
+      y: [0, 10, 0], // Движение вверх и вниз
+      transition: {
+        duration: 1.5, // Время одного цикла анимации
+        repeat: Infinity, // Бесконечное повторение
+        ease: 'easeInOut', // Плавная анимация
+      },
+    },
+  };
+
+
   return (
     <>
-      <div className="relative flex flex-col justify-center  min-h-[100dvh]">
-        <div className="relative flex flex-col justify-center items-center">
+      <div className="p-8 lg:p-4 sm:p-4 relative flex flex-col justify-center min-h-[100dvh] sm:w-full">
+        <div className="relative flex flex-col justify-center items-center sm:mb-10">
           <motion.h1
-            className="box text-mainDark font-bold text-[350px] lg:text-[15vw] 2xl:text-[150px]  pointer-events-none"
+            className="box text-mainDark font-bold text-[15.0vw] pointer-events-none"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -53,7 +67,7 @@ const HeroSection: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={`${mark.className} text-mainRose text-[200px] 2xl:text-[10vw] lg:text-[10vw] absolute bottom-0 pointer-events-none`}
+            className={`${mark.className} text-mainRose text-[10vw] absolute bottom-0 pointer-events-none`}
           >
             {assistantText.split('').map((letter, index) => (
               <motion.span key={index} variants={letterVariants}>
@@ -63,16 +77,14 @@ const HeroSection: React.FC = () => {
           </motion.h2>
         </div>
         <StoresDownloader />
-        <div className="flex justify-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.1, type: 'spring' }}
-            className="absolute w-[600px] lg:w-[50vw] min-w-[300px] bottom-0"
-          >
-            <Image src={phone} alt="phone" placeholder="empty" priority />
-          </motion.div>
-        </div>
+        <motion.div
+          className="absolute bottom-5 left-1/2 flex justify-center items-center"
+          variants={arrowVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <FaChevronDown className="text-3xl" />
+        </motion.div>
       </div>
     </>
   );
