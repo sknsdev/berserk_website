@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import googleplay from '@/../public/stores/googleplay.png';
-import rustore from '@/../public/stores/rustore.png';
+import appstore from '@/../public/stores/appstore.png';
 import Link from 'next/link';
 
 export default function StoresDownloader() {
@@ -23,8 +23,8 @@ export default function StoresDownloader() {
         >
           <Image src={googleplay} alt="Скачать из Google Play" className=" w-full max-h-full object-contain " placeholder="empty" priority />
         </Link>
-        <Link href="https://www.rustore.ru/catalog/app/com.vlasov.berserk_assistant" target="_blank" className="w-full h-full flex justify-center items-center transition-all hover:opacity-[80%]">
-          <Image src={rustore} alt="Скачать из RuStore" className=" w-full max-h-full object-contain " placeholder="empty" priority />
+        <Link href="https://apps.apple.com/us/app/кки-берсерк-ассистент/id6627342092" target="_blank" className="w-full h-full flex justify-center items-center transition-all hover:opacity-[80%]">
+          <Image src={appstore} alt="Скачать из App Store" className=" w-full max-h-full object-contain " placeholder="empty" priority />
         </Link>
       </motion.div>
     </motion.div>

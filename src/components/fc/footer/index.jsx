@@ -23,8 +23,8 @@ const Footer = () => {
                         <a href="https://vk.com/berserk_assistant" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 lg:w-full text-center mx-2">
                             <FaVk /> ВКонтакте
                         </a>
-                        <a href="#" className="flex items-center gap-2 lg:w-full text-center mx-2 cursor-not-allowed" aria-disabled="true">
-                            <FaAppStore /> Appstore (Скоро)
+                        <a href="https://apps.apple.com/us/app/кки-берсерк-ассистент/id6627342092" className="flex items-center gap-2 lg:w-full text-center mx-2" >
+                            <FaAppStore /> Appstore
                         </a>
                         <a href="https://www.rustore.ru/catalog/app/com.vlasov.berserk_assistant" className="flex items-center gap-2 lg:w-full text-center mx-2">
                             RuStore
