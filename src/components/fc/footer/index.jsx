@@ -15,7 +15,7 @@ const Footer = () => {
                         <ul className="flex lg:flex-col space-x-4 lg:space-x-0 text-center lg:text-start">
                             <li><a href="/" className="text-white hover:text-gray-300 ">Главная</a></li>
                             <li><a href="/contact" className="text-white hover:text-gray-300 ">Контакты</a></li>
-                            <li><a href="https://berserk-app.ru/privacy.docx" className="text-white hover:text-gray-300 ">Политика конфиденциальности</a></li>
+                            <li><a href="/privacy" className="text-white hover:text-gray-300 ">Политика конфиденциальности</a></li>
                             <li><a href="https://support.berserk-app.ru/" className="text-white hover:text-gray-300 ">Центр помощи</a></li>
                         </ul>
                     </nav>
