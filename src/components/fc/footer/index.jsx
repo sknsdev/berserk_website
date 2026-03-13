@@ -24,6 +24,7 @@ const Footer = () => {
           <a href="/" className="transition hover:text-white">Главная</a>
           <a href="/contact" className="transition hover:text-white">Связаться</a>
           <a href="/privacy" className="transition hover:text-white">Политика конфиденциальности</a>
+          <a href="/account/recovery" className="transition hover:text-white">Восстановить пароль</a>
           <a href="https://support.berserk-app.ru/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
             Центр помощи
           </a>
