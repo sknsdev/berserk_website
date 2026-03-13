@@ -3,30 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background-rgb: 255, 255, 255;
-  --foreground-rgb: #202020;
-  --text-color: #202020;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-rgb: 255, 255, 255;
-    --foreground-rgb: #202020;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-rgb: #202020;
-    --foreground-rgb: 255, 255, 255;
-    --text-color: #f1f1f1;
-  }
+  --background-rgb: 250, 246, 239;
+  --foreground-rgb: 36, 30, 23;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: rgb(var(--foreground-rgb));
+  background:
+    radial-gradient(circle at top left, rgba(255, 126, 61, 0.18), transparent 24rem),
+    radial-gradient(circle at top right, rgba(255, 71, 71, 0.08), transparent 22rem),
+    linear-gradient(180deg, #fff8f0 0%, #faf6ef 40%, #f4ede3 100%);
 }
 
 .slide-in {

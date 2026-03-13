@@ -17,14 +17,6 @@ const ContactInfo = () => {
                 <h3 className="text-lg font-medium text-gray-700">Электронная почта:</h3>
                 <p className="text-gray-600"><a href="mailto:alexey.vlasov97@mail.ru">alexey.vlasov97@mail.ru</a></p>
             </div>
-            <div className='mb-4'>
-                <h3 className="text-lg font-medium text-gray-700">Номер телефона:</h3>
-                <p className="text-gray-600"><a href="tel:+7 988 556-25-20">+7 988 556-25-20</a></p>
-            </div>
-            <div>
-                <h3 className="text-lg font-medium text-gray-700">Доступно консультации:</h3>
-                <p className="text-gray-600"><a href="tel:+7 988 556-25-20">С понедельника по пятницу, 10:00 - 18:00</a></p>
-            </div>
         </div>
     );
 };

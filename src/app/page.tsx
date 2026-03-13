@@ -1,15 +1,7 @@
-import AppDescriptionSection from '@/components/fc/AppDescription';
-import HeroSection from '@/components/fc/heroSection';
-import ReviewsSlider from '@/components/fc/ReviewsSlider';
+import LandingPage from '@/components/fc/landingPage';
 
 const HomePage = () => {
-  return (
-    <>
-      <HeroSection />
-      <ReviewsSlider />
-      <AppDescriptionSection />
-    </>
-  );
+  return <LandingPage />;
 };
 
 export default HomePage;

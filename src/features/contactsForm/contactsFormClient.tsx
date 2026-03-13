@@ -22,7 +22,7 @@ export const ContactsFormClient: React.FC = () => {
   const client = new Client();
   const requestId = generateRandomId();
   client
-    .setEndpoint('https://appwrite.berserk-app.ru/v1')
+    .setEndpoint('https://admin.fq3.ru/v1')
     .setProject('66602f240028f4ac5b7c');
 
   const databases = new Databases(client);
