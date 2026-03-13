@@ -22,6 +22,12 @@ import {
 } from 'react-icons/fa';
 import StoresDownloader from '@/components/ui/download/StoresDownloader';
 
+type MenuHighlight = {
+  title: string;
+  icon: typeof FaTable;
+  label?: string;
+};
+
 const trustMetrics = [
   {
     value: '4.9/5',
@@ -100,7 +106,7 @@ const featureCards = [
   },
 ];
 
-const menuHighlights = [
+const menuHighlights: MenuHighlight[] = [
   {
     title: 'Таблица ударов',
     icon: FaTable,

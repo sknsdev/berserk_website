@@ -1,22 +1,21 @@
-FROM node:18-alpine
-
-# Установка PM2
-RUN npm install -g pm2
-
-# Установка рабочего каталога
+FROM node:20-alpine AS deps
 WORKDIR /app
-
-# Копируем package.json и package-lock.json
 COPY package*.json ./
+RUN npm ci
 
-# Устанавливаем зависимости
-RUN npm install
-
-# Копируем все файлы проекта в рабочую директорию
+FROM node:20-alpine AS builder
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Сборка проекта
 RUN npm run build
 
-# Запуск PM2 и приложения
-CMD ["pm2-runtime", "start", "ecosystem.config.js"]
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+EXPOSE 3000
+CMD ["node", "server.js"]
